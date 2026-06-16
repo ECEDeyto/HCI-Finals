@@ -99,7 +99,7 @@ body {
     position: relative;
     min-height: 420px;
     background: linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-                url('../img/banner.png') center center / cover no-repeat;
+                url('banner.png') center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
