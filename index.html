@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Personal Portfolio</title>
+    <title>Personal Portfolio</title>
     <link rel="icon" type="image/jpeg" href="pfp.jpg">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -39,49 +39,41 @@
 
     <!-- HEADER -->
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col p-4 header-bg">
+    <nav class="navbar navbar-expand-md header-bg px-3 px-md-4 py-3">
 
-                <div class="d-flex justify-content-between align-items-center">
-
-                    <div class="d-flex align-items-center">
-
-                        <div class="profile-logo">
-                            <img src="pfp.jpg" style="width:100%; height:100%; object-fit:cover; display:block;">
-                        </div>
-
-                        <div class="ms-3">
-
-                            <div class="roboto subtitle-small">
-                                Welcome to My Portfolio
-                            </div>
-
-                            <div class="times title">
-                                <span class="bigger">E</span>mmanuel
-                                <span class="bigger">D</span>eyto
-                            </div>
-
-                            <div class="roboto">
-                                BS Information Technology Student
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="d-flex times nav-links">
-                        <a class="ms-4" href="#about">About</a>
-                        <a class="ms-4" href="#projects">Projects</a>
-                        <a class="ms-4" href="#hobbies">Hobbies</a>
-                        <a class="ms-4" href="#contact">Contact</a>
-                    </div>
-
+        <!-- Left: profile pic + name -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <div class="profile-logo flex-shrink-0">
+                <img src="pfp.jpg" style="width:100%; height:100%; object-fit:cover; display:block;">
+            </div>
+            <div class="ms-3">
+                <div class="roboto subtitle-small text-white">Welcome to My Portfolio</div>
+                <div class="times title text-white">
+                    <span class="bigger">E</span>mmanuel
+                    <span class="bigger">D</span>eyto
                 </div>
+                <div class="roboto text-white">BS Information Technology Student</div>
+            </div>
+        </a>
 
+        <!-- Hamburger toggle (visible on mobile) -->
+        <button class="navbar-toggler ms-auto" type="button"
+                data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav links -->
+        <div class="collapse navbar-collapse justify-content-end mt-2 mt-md-0" id="mainNav">
+            <div class="d-flex flex-column flex-md-row times nav-links text-center gap-2 gap-md-0 pb-2 pb-md-0">
+                <a class="ms-md-4 py-1" href="#about">About</a>
+                <a class="ms-md-4 py-1" href="#projects">Projects</a>
+                <a class="ms-md-4 py-1" href="#hobbies">Hobbies</a>
+                <a class="ms-md-4 py-1" href="#contact">Contact</a>
             </div>
         </div>
-    </div>
+
+    </nav>
 
     <!-- BANNER -->
 
@@ -91,8 +83,8 @@
             <div class="roboto banner-tagline">IT Student · Developer · Problem Solver</div>
             <div class="times banner-headline">Building Digital Solutions,<br>One Project at a Time</div>
             <div class="roboto banner-sub mt-3">Passionate about programming, web development, and emerging technologies.</div>
-            <div class="mt-4">
-                <a href="#projects" class="banner-btn me-3">View My Projects</a>
+            <div class="mt-4 banner-btns">
+                <a href="#projects" class="banner-btn">View My Projects</a>
                 <a href="#contact" class="banner-btn banner-btn-outline">Get in Touch</a>
             </div>
         </div>
@@ -100,191 +92,137 @@
 
     <!-- ABOUT ME -->
 
-    <div class="container mt-5" id="about">
-
+    <div class="container mt-5 px-4" id="about">
         <div class="row">
             <div class="col">
-
-                <div class="text-center times subtitle">
-                    About Me
-                </div>
-
+                <div class="text-center times subtitle">About Me</div>
                 <div class="text-center roboto description mt-4">
                     I am a Bachelor of Science in Information Technology student
                     who enjoys programming, web development, database management,
                     and learning new technologies. My goal is to continuously
                     improve my skills and create meaningful projects.
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <!-- EDUCATION -->
 
-    <div class="container mt-5">
-
+    <div class="container mt-5 px-4">
         <div class="row">
             <div class="col">
-
-                <div class="text-center times subtitle">
-                    Education
-                </div>
-
+                <div class="text-center times subtitle">Education</div>
                 <div class="roboto mt-4 text-center">
                     <h4>Bachelor of Science in Information Technology</h4>
-
                     <p>
                         Currently pursuing a degree in Information Technology
                         with a focus on programming, networking, databases,
                         and system development.
                     </p>
-
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <!-- PROJECTS -->
 
-    <div class="container mt-5" id="projects">
-
+    <div class="container mt-5 px-4" id="projects">
         <div class="row">
             <div class="col">
-                <div class="text-center times subtitle">
-                    My Projects
-                </div>
+                <div class="text-center times subtitle">My Projects</div>
             </div>
         </div>
 
-        <div class="row mt-4">
+        <div class="row mt-4 g-3">
 
-            <div class="col project-box p-0 m-2 overflow-hidden">
-                <img src="Card_Game.png" class="project-img" alt="Memory Card Game">
-                <div class="p-4">
-                    <h4>Memory Card Game</h4>
-                    <p>
-                        A game developed using Python and Pygame that tests
-                        memory and concentration skills.
-                    </p>
+            <div class="col-12 col-sm-6">
+                <div class="project-box p-0 overflow-hidden h-100">
+                    <img src="Card_Game.png" class="project-img" alt="Memory Card Game">
+                    <div class="p-4">
+                        <h4>Memory Card Game</h4>
+                        <p>A game developed using Python and Pygame that tests memory and concentration skills.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col project-box p-0 m-2 overflow-hidden">
-                <img src="TrikeTrace.png" class="project-img" alt="TrikeTrace System">
-                <div class="p-4">
-                    <h4>TrikeTrace System</h4>
-                    <p>
-                        A web-based system focused on tricycle monitoring
-                        and management.
-                    </p>
+            <div class="col-12 col-sm-6">
+                <div class="project-box p-0 overflow-hidden h-100">
+                    <img src="TrikeTrace.png" class="project-img" alt="TrikeTrace System">
+                    <div class="p-4">
+                        <h4>TrikeTrace System</h4>
+                        <p>A web-based system focused on tricycle monitoring and management.</p>
+                    </div>
                 </div>
             </div>
 
-        </div>
-
-        <div class="row mt-3">
-
-            <div class="col project-box p-0 m-2 overflow-hidden">
-                <img src="Payroll.png" class="project-img" alt="Payroll Database">
-                <div class="p-4">
-                    <h4>Payroll Database</h4>
-                    <p>
-                        SQL-based database project for employee payroll
-                        management and reporting.
-                    </p>
+            <div class="col-12 col-sm-6">
+                <div class="project-box p-0 overflow-hidden h-100">
+                    <img src="Payroll.png" class="project-img" alt="Payroll Database">
+                    <div class="p-4">
+                        <h4>Payroll Database</h4>
+                        <p>SQL-based database project for employee payroll management and reporting.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col project-box p-0 m-2 overflow-hidden">
-                <img src="Cisco.png" class="project-img" alt="Cisco Packet Tracer">
-                <div class="p-4">
-                    <h4>Cisco Packet Tracer Activities</h4>
-                    <p>
-                        Networking simulations involving LAN and WAN
-                        configurations.
-                    </p>
+            <div class="col-12 col-sm-6">
+                <div class="project-box p-0 overflow-hidden h-100">
+                    <img src="Cisco.png" class="project-img" alt="Cisco Packet Tracer">
+                    <div class="p-4">
+                        <h4>Cisco Packet Tracer Activities</h4>
+                        <p>Networking simulations involving LAN and WAN configurations.</p>
+                    </div>
                 </div>
             </div>
 
         </div>
-
     </div>
 
     <!-- HOBBIES -->
 
-    <div class="container mt-5" id="hobbies">
-
+    <div class="container mt-5 px-4" id="hobbies">
         <div class="row">
             <div class="col">
-                <div class="text-center times subtitle">
-                    Hobbies & Interests
-                </div>
+                <div class="text-center times subtitle">Hobbies & Interests</div>
             </div>
         </div>
 
-        <div class="row mt-4 text-center">
-
-            <div class="col hobby-box p-3">
-                Programming
-            </div>
-
-            <div class="col hobby-box p-3">
-                Gaming
-            </div>
-
-            <div class="col hobby-box p-3">
-                Technology
-            </div>
-
-            <div class="col hobby-box p-3">
-                Learning
-            </div>
-
+        <div class="row mt-4 text-center g-2">
+            <div class="col-6 col-md-3"><div class="hobby-box p-3">Programming</div></div>
+            <div class="col-6 col-md-3"><div class="hobby-box p-3">Gaming</div></div>
+            <div class="col-6 col-md-3"><div class="hobby-box p-3">Technology</div></div>
+            <div class="col-6 col-md-3"><div class="hobby-box p-3">Learning</div></div>
         </div>
-
     </div>
 
     <!-- CONTACT -->
 
-    <div class="container mt-5 mb-5" id="contact">
-
+    <div class="container mt-5 mb-5 px-4" id="contact">
         <div class="row">
             <div class="col">
-
-                <div class="text-center times subtitle">
-                    Contact Me
-                </div>
-
+                <div class="text-center times subtitle">Contact Me</div>
                 <div class="text-center roboto mt-4">
-
                     Email: emmanueldeyto68@email.com
                     <br><br>
                     Facebook: Emmanuel Christian E. Deyto
                     <br><br>
                     Phone: 09106422960
-
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <!-- FOOTER -->
 
-    <div class="container-fluid footer-bg p-5">
-
+    <div class="container-fluid footer-bg p-4 p-md-5">
         <div class="row">
             <div class="col text-center text-white roboto">
                 © 2026 Deyto's Portfolio
             </div>
         </div>
-
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
