@@ -10,6 +10,7 @@
     color: white;
 }
 
+/* Gold hamburger icon */
 .navbar-toggler {
     border-color: rgba(201, 168, 76, 0.6);
     flex-shrink: 0;
@@ -91,14 +92,14 @@
 .banner-section {
     position: relative;
     width: 100%;
-    display: block;   
+    display: block;      
     overflow: hidden;
 }
 
 .banner-bg {
     display: block;
     width: 100%;
-    height: auto;       
+    height: auto;    
 }
 
 .banner-dim {
@@ -222,12 +223,44 @@ body {
     background-color: white;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden;  
 }
 
 @media (max-width: 576px) {
     .profile-logo {
         width: 50px;
         height: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .profile-logo {
+        width: 48px;
+        height: 48px;
+    }
+    .title {
+        font-size: 17px;
+        line-height: 1.2;
+    }
+    .bigger {
+        font-size: 21px;
+    }
+    .subtitle-small {
+        font-size: 11px;
+    }
+    
+    .navbar {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    
+    .banner-content {
+        padding: 16px 16px;
+    }
+    .banner-bg {
+        min-height: 320px;
+        object-fit: cover;
+        object-position: center;
+        height: auto;
     }
 }
