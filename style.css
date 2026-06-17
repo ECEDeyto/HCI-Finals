@@ -94,7 +94,7 @@
 .banner-section {
     position: relative;
     width: 100%;
-    min-height: 280px;
+    min-height: 200px;
     overflow: hidden;
     display: flex;
     align-items: center;
